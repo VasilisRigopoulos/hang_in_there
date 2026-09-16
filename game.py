@@ -3,8 +3,8 @@
 # Τρέξε το με:  python hangman.py
 
 import random
+import words
 
-WORDS = ["python", "github", "codespace", "commit", "variable", "function"]
 MAX_MISTAKES = 6
 
 STAGES = [
@@ -18,8 +18,7 @@ STAGES = [
 ]
 
 
-def pick_word():
-    return random.choice(WORDS)
+
 
 
 def show_word(word, guessed):
@@ -42,7 +41,7 @@ def word_complete(word, guessed):
 
 
 def play():
-    word = pick_word()
+    word = words.pick_word()
     guessed = []
     mistakes = 0
 
