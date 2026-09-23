@@ -3,19 +3,12 @@
 # Τρέξε το με:  python hangman.py
 
 import random
-import words
+from words import *
+from art import STAGES
 
 MAX_MISTAKES = 6
 
-STAGES = [
-    "  +---+\n      |\n      |\n      |\n     ===",
-    "  +---+\n  O   |\n      |\n      |\n     ===",
-    "  +---+\n  O   |\n  |   |\n      |\n     ===",
-    "  +---+\n  O   |\n /|   |\n      |\n     ===",
-    "  +---+\n  O   |\n /|\\  |\n      |\n     ===",
-    "  +---+\n  O   |\n /|\\  |\n /    |\n     ===",
-    "  +---+\n  O   |\n /|\\  |\n / \\  |\n     ===",
-]
+
 
 
 
@@ -41,7 +34,7 @@ def word_complete(word, guessed):
 
 
 def play():
-    word = words.pick_word()
+    word = pick_word()
     guessed = []
     mistakes = 0
 
