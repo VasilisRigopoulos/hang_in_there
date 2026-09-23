@@ -30,7 +30,7 @@ print(f(2.9), floor(2.9))
 
 ```python
 import math as m
-print(math.pi)
+print(m.pi)
 ```
 
 Ποιος από τους τρεις τρόπους είναι ο καλύτερος και γιατί;
@@ -42,6 +42,13 @@ print(math.pi)
 - χρησιμοποιεί ΚΑΙ την πραγματική `sqrt` του `math`,
 - τυπώνει `no idea 4.0` με μία `print`.
 
+```python
+from math import sqrt as square_root
+
+def sqrt(x):
+    return f"no idea {square_root(x)}"
+```
+
 Ποια μορφή import ΔΕΝ μπορείς να χρησιμοποιήσεις εδώ; Γιατί;
 
 ## ★ Bonus — Δικό σου module (10')
@@ -49,3 +56,4 @@ print(math.pi)
 1. Φτιάξε `greetings.py` με συνάρτηση `hello(name)` που επιστρέφει `"Γεια σου, <name>!"`.
 2. Φτιάξε `main.py` που καλεί την `hello("Python")` **με τις 4 μορφές import**, μία μετά την άλλη, και τυπώνει 4 φορές τον χαιρετισμό.
 3. Παρατήρησε τι εμφανίστηκε στον φάκελο μετά το τρέξιμο. Σημείωσέ το στο `NOTES.md`.
+
